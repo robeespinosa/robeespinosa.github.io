@@ -524,5 +524,21 @@
   }),{rootMargin:'200px'});
   document.querySelectorAll('video').forEach(v=>io.observe(v));
 </script>
+<!-- Analítica: GoatCounter (sin cookies) -->
+<script data-goatcounter="https://robeespinosa.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+<script>
+  // Clics como eventos en GoatCounter
+  function gcEvent(name){
+    try{ if(window.goatcounter && window.goatcounter.count){ window.goatcounter.count({path:'clic-'+name,title:name,event:true}); } }catch(e){}
+  }
+  document.addEventListener('click',function(e){
+    var el=e.target.closest('a,button,#email'); if(!el) return;
+    var t=(el.textContent||'').replace(/\s+/g,' ').trim();
+    if(el.id==='email'){ return gcEvent('copiar-email'); }
+    if(el.closest('nav')||el.closest('.nav')){ return gcEvent('menu: '+t); }
+    if(el.hasAttribute('data-f')){ return gcEvent('filtro: '+t.replace(/\s*\d*$/,'')); }
+    if(el.classList.contains('btn')){ return gcEvent('boton: '+t); }
+  });
+</script>
 </body>
 </html>
