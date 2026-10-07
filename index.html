@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rober Espinosa — Diseño, packaging y campañas 360</title>
+<meta name="description" content="Rober Espinosa, Senior Graphic & Packaging Designer en Barcelona. Perfil 360: estrategia y campañas, branding, packaging y artes finales, producción con imprenta y proveedores, PLV, ecommerce y ads.">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<!-- AVISO: las cifras y KPIs de esta página siguen siendo marcadores pendientes de sustituir por datos reales. Los vídeos no contienen métricas. -->
+<style>
+  :root{
+    --ink:#111111; --paper:#F4F1EA; --accent:#DDEB7E; --muted:#6B6B6B;
+    --line:rgba(17,17,17,.12); --radius:18px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',sans-serif;background:var(--paper);color:var(--ink);line-height:1.5}
+  h1,h2,h3,.big{font-family:'Archivo',sans-serif;line-height:.95;letter-spacing:-.02em}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1320px;margin:0 auto;padding:0 28px}
+  section{padding:110px 0}
+
+  /* Placeholder para vídeos / imágenes */
+  .ph{background:#D9D5CC;border-radius:var(--radius);display:flex;align-items:center;justify-content:center;
+      color:#8A867D;font:600 13px/1.3 'Inter';text-transform:uppercase;letter-spacing:.08em;text-align:center;padding:16px;
+      position:relative;overflow:hidden}
+  .ph::before{content:"▶";position:absolute;top:14px;left:16px;font-size:12px;opacity:.6}
+  .ph.img::before{content:"▢"}
+  /* Vídeo real dentro del placeholder */
+  .ph.v{padding:0}
+  .ph.v::before{display:none}
+  .ph.v video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+  .ph.v.contain video{object-fit:contain}
+
+  /* NAV */
+  nav{position:fixed;top:0;left:0;right:0;z-index:50;padding:18px 0;mix-blend-mode:difference;color:#fff}
+  nav .wrap{display:flex;justify-content:space-between;align-items:center}
+  .logo{font:900 20px 'Archivo';letter-spacing:-.02em}
+  nav ul{display:flex;gap:28px;list-style:none;font-weight:500;font-size:15px}
+  .btn{display:inline-block;padding:14px 26px;border-radius:999px;font-weight:600;font-size:15px;transition:transform .2s}
+  .btn:hover{transform:translateY(-2px)}
+  .btn-dark{background:var(--ink);color:#fff}
+  .btn-accent{background:var(--accent);color:var(--ink)}
+  .btn-line{border:1.5px solid var(--ink)}
+
+  /* HERO */
+  .hero{padding:0;height:100vh;min-height:680px;position:relative;overflow:hidden}
+  .hero .ph{position:absolute;inset:0;border-radius:0;font-size:15px}
+  .hero::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+     background:linear-gradient(180deg,rgba(17,17,17,.50) 0%,rgba(17,17,17,.42) 40%,rgba(17,17,17,.78) 100%)}
+  .hero-content{position:absolute;left:0;right:0;bottom:72px;z-index:2;color:#fff}
+  .hero .eyebrow{display:block;font:600 13px 'Inter';letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:18px}
+  .hero h1{font-size:clamp(34px,4.8vw,72px);font-weight:800;line-height:1.02;max-width:860px}
+  .hero h1 span{color:var(--accent)}
+  .hero p{font-size:19px;line-height:1.55;max-width:640px;margin:20px 0 0;color:#E4E1DA}
+  .hero .btn-line{border-color:#fff;color:#fff}
+  .hero .ctas{display:flex;gap:12px;flex-wrap:wrap}
+
+  /* MARQUEE */
+  .marquee{background:var(--ink);color:var(--paper);padding:22px 0;overflow:hidden;white-space:nowrap}
+  .marquee-track{display:inline-block;animation:scroll 28s linear infinite;font:800 30px 'Archivo';text-transform:uppercase}
+  .marquee-track span{margin:0 26px}
+  .marquee-track i{color:var(--accent);font-style:normal}
+  @keyframes scroll{to{transform:translateX(-50%)}}
+
+  /* STATS */
+  .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+  .stat{border-top:2px solid var(--ink);padding-top:22px}
+  .stat .big{font-size:clamp(52px,6vw,88px);font-weight:900}
+  .stat p{color:var(--muted);margin-top:8px;font-size:15px}
+  .logos{display:flex;flex-wrap:wrap;gap:16px 48px;align-items:center;margin-top:80px;padding-top:36px;border-top:1px solid var(--line)}
+  .logos small{color:var(--muted);text-transform:uppercase;letter-spacing:.1em;font-size:12px;width:100%}
+  .logos b{font:800 26px 'Archivo';opacity:.75}
+
+  /* WORK */
+  .sec-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:44px;flex-wrap:wrap}
+  .sec-head h2{font-size:clamp(44px,6vw,96px);font-weight:900}
+  .filters{display:flex;gap:10px;flex-wrap:wrap}
+  .filters button{border:1.5px solid var(--ink);background:none;padding:10px 18px;border-radius:999px;font:600 14px 'Inter';cursor:pointer}
+  .filters button sup{font-size:10px;margin-left:3px}
+  .filters button.active{background:var(--ink);color:#fff}
+  .work-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:22px}
+  .card{grid-column:span 6;transition:opacity .3s}
+  .card.wide{grid-column:span 12}
+  .card.third{grid-column:span 4}
+  .card .ph{aspect-ratio:16/10}
+  .card.third .ph{aspect-ratio:9/14}
+  .card.wide .ph{aspect-ratio:21/9}
+  .card-info{display:flex;justify-content:space-between;gap:16px;margin-top:14px;align-items:start}
+  .card-info h3{font-size:24px;font-weight:800}
+  .card-info p{color:var(--muted);font-size:14px;margin-top:4px}
+  .kpi{background:var(--accent);padding:6px 12px;border-radius:999px;font-weight:600;font-size:13px;white-space:nowrap}
+  .kpi.tag{background:none;border:1.5px solid var(--ink)}
+  .card.hide{display:none}
+
+  /* CASE STUDY */
+  .case{background:var(--ink);color:var(--paper);border-radius:32px;margin:0 28px}
+  .case .tag{color:var(--accent);text-transform:uppercase;letter-spacing:.12em;font-size:13px;font-weight:600}
+  .case h2{font-size:clamp(40px,5.5vw,84px);font-weight:900;margin:16px 0 26px;max-width:900px}
+  .case-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin:50px 0}
+  .case-cols h4{font:800 14px 'Archivo';text-transform:uppercase;letter-spacing:.08em;color:var(--accent);margin-bottom:10px}
+  .case-cols p{color:#BDBAB2;font-size:15px}
+  .phones{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+  .phones .ph{aspect-ratio:9/19.5;border-radius:28px;background:#2A2A2A;color:#777;border:6px solid #2A2A2A}
+  .case-results{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:56px}
+  .case-results div{border-top:1px solid #444;padding-top:18px}
+  .case-results .big{font-size:56px;font-weight:900;color:var(--accent)}
+  .case-results p{color:#BDBAB2;font-size:14px}
+
+  /* SERVICES */
+  .services-list{border-top:2px solid var(--ink)}
+  .service{display:grid;grid-template-columns:80px 1fr 1.3fr;gap:24px;padding:30px 0;border-bottom:1px solid var(--line);align-items:start}
+  .service .n{font:800 16px 'Archivo';color:var(--muted)}
+  .service h3{font-size:clamp(28px,3.4vw,46px);font-weight:900}
+  .service p{color:var(--muted)}
+  .service small{display:block;margin-top:10px;font-weight:600;color:var(--ink)}
+
+  /* IA */
+  .ai-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+  .ai-grid .ph{aspect-ratio:4/3}
+  .ai-grid h2{font-size:clamp(40px,5vw,76px);font-weight:900;margin-bottom:22px}
+  .ai-grid ul{list-style:none;margin-top:26px}
+  .ai-grid li{padding:14px 0;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:16px}
+  .ai-grid li b{font-family:'Archivo'}
+
+  /* ABOUT */
+  .about-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:center}
+  .about-grid .ph{aspect-ratio:4/5}
+  .about-grid h2{font-size:clamp(40px,4.6vw,70px);font-weight:900;margin-bottom:24px}
+  .about-grid p{font-size:18px;color:#333;margin-bottom:16px}
+  .timeline{margin-top:30px;border-top:2px solid var(--ink)}
+  .timeline div{display:flex;justify-content:space-between;padding:14px 0;border-bottom:1px solid var(--line);gap:16px}
+  .timeline span{color:var(--muted);text-align:right}
+  .mini{font:800 13px 'Archivo';text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin:34px 0 0}
+  .mini + .timeline{margin-top:12px}
+  .sec-head .lead{max-width:460px;color:var(--muted)}
+
+  /* TESTIMONIALS */
+  .testis{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .testi{background:#fff;border-radius:var(--radius);padding:32px}
+  .testi q{font-size:18px;display:block;margin-bottom:22px}
+  .testi .who{display:flex;gap:12px;align-items:center}
+  .testi .who .ph{width:48px;height:48px;border-radius:50%;padding:0;font-size:0}
+  .testi .who .ph::before{display:none}
+  .testi .who small{color:var(--muted);display:block}
+
+  /* CONTACT */
+  .contact{background:var(--accent);text-align:center}
+  .contact h2{font-size:clamp(52px,9vw,150px);font-weight:900}
+  .contact p{font-size:20px;margin:20px auto 36px;max-width:640px}
+  .email{font:900 clamp(26px,4vw,52px) 'Archivo';cursor:pointer;border-bottom:4px solid var(--ink);display:inline-block}
+  .email-msg{display:block;font-size:14px;margin-top:12px;height:20px}
+  .contact .ctas{display:flex;gap:12px;justify-content:center;margin-top:36px;flex-wrap:wrap}
+  footer{padding:30px 0;font-size:14px;color:var(--muted)}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+
+  /* RESPONSIVE */
+  @media(max-width:900px){
+    nav ul{display:none}
+    section{padding:80px 0}
+    .stats-grid,.case-results{grid-template-columns:repeat(2,1fr)}
+    .card,.card.third{grid-column:span 12}
+    .case-cols,.testis,.ai-grid,.about-grid{grid-template-columns:1fr}
+    .phones{grid-template-columns:repeat(2,1fr)}
+    .service{grid-template-columns:1fr}
+    .case{margin:0 12px}
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="wrap">
+    <a href="#" class="logo">ROBER ESPINOSA®</a>
+    <ul>
+      <li><a href="#work">Trabajo</a></li>
+      <li><a href="#case">Caso Viteba</a></li>
+      <li><a href="#services">Servicios</a></li>
+      <li><a href="#about">Sobre mí</a></li>
+      <li><a href="#contact">Contacto</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="ph v"><video autoplay muted loop playsinline preload="auto" poster="01_hero_reel/hero_reel_16x9.jpg"><source media="(max-width:700px)" src="01_hero_reel/hero_reel_9x16.mp4" type="video/mp4"><source src="01_hero_reel/hero_reel_16x9.webm" type="video/webm"><source src="01_hero_reel/hero_reel_16x9.mp4" type="video/mp4"></video></div>
+  <div class="hero-content">
+    <div class="wrap">
+      <span class="eyebrow">Senior Graphic & Packaging Designer</span>
+      <h1>Diseño que <span>vende</span>, del packaging al scroll.</h1>
+      <p>De la idea a la imprenta y de la imprenta a la campaña: packaging, artes finales y producción con proveedores, PLV, ecommerce y publicidad para lanzar producto de principio a fin.</p>
+    </div>
+  </div>
+</header>
+
+<!-- MARQUEE -->
+<div class="marquee">
+  <div class="marquee-track">
+    <span>Desarrollo de producto</span><i>✦</i><span>Packaging</span><i>✦</i><span>Artes finales</span><i>✦</i><span>Preimpresión</span><i>✦</i><span>Producción</span><i>✦</i><span>PLV & Offline</span><i>✦</i><span>Ecommerce</span><i>✦</i><span>Ads & Social</span><i>✦</i><span>Motion</span><i>✦</i>
+    <span>Desarrollo de producto</span><i>✦</i><span>Packaging</span><i>✦</i><span>Artes finales</span><i>✦</i><span>Preimpresión</span><i>✦</i><span>Producción</span><i>✦</i><span>PLV & Offline</span><i>✦</i><span>Ecommerce</span><i>✦</i><span>Ads & Social</span><i>✦</i><span>Motion</span><i>✦</i>
+  </div>
+</div>
+
+<!-- STATS -->
+<section id="stats">
+  <div class="wrap">
+    <div class="stats-grid">
+      <div class="stat"><div class="big">9+</div><p>años diseñando para marcas de salud, bienestar y consumo</p></div>
+      <div class="stat"><div class="big">150+</div><p>referencias de packaging llevadas a lineal y farmacia</p></div>
+      <div class="stat"><div class="big">1.200+</div><p>creatividades de ads y social entregadas al año</p></div>
+      <div class="stat"><div class="big">2</div><p>mercados con lanzamiento de producto en Viteba: España e Italia</p></div>
+    </div>
+    <div class="logos">
+      <small>Marcas en las que he trabajado dentro del equipo de marketing</small>
+      <b>Viteba</b><b>Eladiet</b><b>ICEB</b><b>Amazon Fizzicals</b>
+    </div>
+  </div>
+</section>
+
+<!-- WORK -->
+<section id="work" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><h2>Trabajo</h2><p class="lead" style="margin-top:14px">Piezas reales, en movimiento. En cada una indico qué hice yo.</p></div>
+      <div class="filters">
+        <button class="active" data-f="all">Todo<sup></sup></button>
+        <button data-f="packaging">Packaging<sup></sup></button>
+        <button data-f="ads">Ads & Social<sup></sup></button>
+        <button data-f="ecom">Ecommerce<sup></sup></button>
+        <button data-f="offline">Print & PLV<sup></sup></button>
+        <button data-f="motion">Motion<sup></sup></button>
+      </div>
+    </div>
+
+    <div class="work-grid">
+      <article class="card wide" data-cat="ads ecom">
+        <div class="ph v" ><video muted loop playsinline preload="metadata" poster="02_trabajo/viteba_italia/viteba_it_vitaminaC_16x9.jpg"><source src="02_trabajo/viteba_italia/viteba_it_vitaminaC_16x9.webm" type="video/webm"><source src="02_trabajo/viteba_italia/viteba_it_vitaminaC_16x9.mp4" type="video/mp4"></video></div>
+        <div class="card-info">
+          <div><h3>Viteba — Now in Italy</h3><p>Dirección de arte · Ads Meta · Landing · Key visuals</p></div>
+          <span class="kpi">ROAS 3,4x</span>
+        </div>
+      </article>
+
+      <article class="card" data-cat="packaging">
+        <div class="ph v" ><video muted loop playsinline preload="metadata" poster="02_trabajo/viteba_packaging/viteba_gama_botes_16x9.jpg"><source src="02_trabajo/viteba_packaging/viteba_gama_botes_16x9.webm" type="video/webm"><source src="02_trabajo/viteba_packaging/viteba_gama_botes_16x9.mp4" type="video/mp4"></video></div>
+        <div class="card-info">
+          <div><h3>Viteba — Línea de suplementos</h3><p>Sistema de packaging · 24 SKUs</p></div>
+          <span class="kpi">24 SKUs</span>
+        </div>
+      </article>
+
+      <article class="card" data-cat="packaging">
+        <div class="ph v" ><video muted loop playsinline preload="metadata" poster="02_trabajo/eladiet_packaging/eladiet_gama_bodegon_16x9.jpg"><source src="02_trabajo/eladiet_packaging/eladiet_gama_bodegon_16x9.webm" type="video/webm"><source src="02_trabajo/eladiet_packaging/eladiet_gama_bodegon_16x9.mp4" type="video/mp4"></video></div>
+        <div class="card-info">
+          <div><h3>Eladiet — Rediseño de gama</h3><p>Packaging farmacéutico · Normativa · Producción</p></div>
+          <span class="kpi">+60 refs</span>
+        </div>
+      </article>
+
+      <article class="card third" data-cat="ads motion">
+        <div class="ph v" ><video muted loop playsinline preload="metadata" poster="02_trabajo/reels/viteba_reel_puro_9x16.jpg"><source src="02_trabajo/reels/viteba_reel_puro_9x16.webm" type="video/webm"><source src="02_trabajo/reels/viteba_reel_puro_9x16.mp4" type="video/mp4"></video></div>
+        <div class="card-info">
+          <div><h3>Reels de producto</h3><p>Guion · Edición · Motion</p></div>
+          <span class="kpi">CTR 2,8%</span>
+        </div>
+      </article>
+
+      <article class="card third" data-cat="ads">
+        <div class="ph v" ><video muted loop playsinline preload="metadata" poster="02_trabajo/ads/viteba_ad_beauty_9x16.jpg"><source src="02_trabajo/ads/viteba_ad_beauty_9x16.webm" type="video/webm"><source src="02_trabajo/ads/viteba_ad_beauty_9x16.mp4" type="video/mp4"></video></div>
+        <div class="card-info">
+          <div><h3>Creatividades performance</h3><p>Testing A/B · 30+ variantes/mes</p></div>
+          <span class="kpi">−32% CPA</span>
+        </div>
+      </article>
+
+      <article class="card third" data-cat="ecom">
+        <div class="ph v" ><video muted loop playsinline preload="metadata" poster="02_trabajo/fichas_producto/viteba_ficha_beauty_movil_9x16.jpg"><source src="02_trabajo/fichas_producto/viteba_ficha_beauty_movil_9x16.webm" type="video/webm"><source src="02_trabajo/fichas_producto/viteba_ficha_beauty_movil_9x16.mp4" type="video/mp4"></video></div>
+        <div class="card-info">
+          <div><h3>Fichas de producto</h3><p>Shopify · Imágenes PDP · Infografías</p></div>
+          <span class="kpi">+18% CVR</span>
+        </div>
+      </article>
+
+      <article class="card" data-cat="packaging offline">
+        <div class="ph v" ><video muted loop playsinline preload="metadata" poster="02_trabajo/viteba_packaging/viteba_rollups_displays_16x9.jpg"><source src="02_trabajo/viteba_packaging/viteba_rollups_displays_16x9.webm" type="video/webm"><source src="02_trabajo/viteba_packaging/viteba_rollups_displays_16x9.mp4" type="video/mp4"></video></div>
+        <div class="card-info">
+          <div><h3>Viteba — PLV y material offline</h3><p>Rollups · Displays · Folletos · Artes finales para imprenta</p></div>
+          <span class="kpi tag">Print & PLV</span>
+        </div>
+      </article>
+
+      <article class="card" data-cat="packaging">
+        <div class="ph v" ><video muted loop playsinline preload="metadata" poster="02_trabajo/iceb_branding/iceb_web_home_escritorio_16x9.jpg"><source src="02_trabajo/iceb_branding/iceb_web_home_escritorio_16x9.webm" type="video/webm"><source src="02_trabajo/iceb_branding/iceb_web_home_escritorio_16x9.mp4" type="video/mp4"></video></div>
+        <div class="card-info">
+          <div><h3>Branding para startups</h3><p>Identidad · Packaging · Materiales de venta</p></div>
+          <span class="kpi">8 años</span>
+        </div>
+      </article>
+
+      <!-- Tarjetas añadidas con material real (sin métricas: etiqueta descriptiva) -->
+      <article class="card third" data-cat="ads motion">
+        <div class="ph v" ><video muted loop playsinline preload="metadata" poster="02_trabajo/reels/viteba_persona_lo_que_destruye_tu_piel_despues_de_los_5.jpg"><source src="02_trabajo/reels/viteba_persona_lo_que_destruye_tu_piel_despues_de_los_5.webm" type="video/webm"><source src="02_trabajo/reels/viteba_persona_lo_que_destruye_tu_piel_despues_de_los_5.mp4" type="video/mp4"></video></div>
+        <div class="card-info">
+          <div><h3>Expertos a cámara</h3><p>Viteba · Pódcast y shorts · Edición y subtítulos</p></div>
+          <span class="kpi tag">Social</span>
+        </div>
+      </article>
+
+      <article class="card third" data-cat="ads">
+        <div class="ph v" ><video muted loop playsinline preload="metadata" poster="02_trabajo/ads/viteba_ad_sticks_9x16.jpg"><source src="02_trabajo/ads/viteba_ad_sticks_9x16.webm" type="video/webm"><source src="02_trabajo/ads/viteba_ad_sticks_9x16.mp4" type="video/mp4"></video></div>
+        <div class="card-info">
+          <div><h3>Lanzamiento Sticks</h3><p>Viteba · Ad de lanzamiento ES/IT · 9:16, 1:1, 16:9</p></div>
+          <span class="kpi tag">Ads</span>
+        </div>
+      </article>
+
+      <article class="card third" data-cat="ads motion">
+        <div class="ph v" ><video muted loop playsinline preload="metadata" poster="02_trabajo/viteba_italia/viteba_it_laura_persona_9x16.jpg"><source src="02_trabajo/viteba_italia/viteba_it_laura_persona_9x16.webm" type="video/webm"><source src="02_trabajo/viteba_italia/viteba_it_laura_persona_9x16.mp4" type="video/mp4"></video></div>
+        <div class="card-info">
+          <div><h3>Contenido para Italia</h3><p>Viteba Italia · Reels y stories localizados</p></div>
+          <span class="kpi tag">IT</span>
+        </div>
+      </article>
+
+      <article class="card" data-cat="ecom">
+        <div class="ph v" ><video muted loop playsinline preload="metadata" poster="02_trabajo/fichas_producto/viteba_ficha_beauty_escritorio_16x9.jpg"><source src="02_trabajo/fichas_producto/viteba_ficha_beauty_escritorio_16x9.webm" type="video/webm"><source src="02_trabajo/fichas_producto/viteba_ficha_beauty_escritorio_16x9.mp4" type="video/mp4"></video></div>
+        <div class="card-info">
+          <div><h3>Viteba.com — Ficha Colágeno Beauty</h3><p>Ecommerce · Imágenes PDP · Módulos de contenido</p></div>
+          <span class="kpi tag">Shopify</span>
+        </div>
+      </article>
+
+      <article class="card" data-cat="ads motion">
+        <div class="ph v" ><video muted loop playsinline preload="metadata" poster="02_trabajo/eladiet_campa%C3%B1as/eladiet_jellykids_16x9.jpg"><source src="02_trabajo/eladiet_campa%C3%B1as/eladiet_jellykids_16x9.webm" type="video/webm"><source src="02_trabajo/eladiet_campa%C3%B1as/eladiet_jellykids_16x9.mp4" type="video/mp4"></video></div>
+        <div class="card-info">
+          <div><h3>Eladiet — Campañas de gama</h3><p>Spots de producto · Vídeo y motion</p></div>
+          <span class="kpi tag">Vídeo</span>
+        </div>
+      </article>
+
+      <article class="card wide" data-cat="packaging">
+        <div class="ph v" ><video muted loop playsinline preload="metadata" poster="02_trabajo/eladiet_packaging/eladiet_packs_color_16x9.jpg"><source src="02_trabajo/eladiet_packaging/eladiet_packs_color_16x9.webm" type="video/webm"><source src="02_trabajo/eladiet_packaging/eladiet_packs_color_16x9.mp4" type="video/mp4"></video></div>
+        <div class="card-info">
+          <div><h3>Eladiet — Packaging en movimiento</h3><p>Packaging farmacéutico · Gama completa</p></div>
+          <span class="kpi tag">Packaging</span>
+        </div>
+      </article>
+
+      <article class="card" data-cat="packaging offline">
+        <div class="ph v" ><video muted loop playsinline preload="metadata" poster="02_trabajo/eladiet_packaging/eladiet_folletos_16x9.jpg"><source src="02_trabajo/eladiet_packaging/eladiet_folletos_16x9.webm" type="video/webm"><source src="02_trabajo/eladiet_packaging/eladiet_folletos_16x9.mp4" type="video/mp4"></video></div>
+        <div class="card-info">
+          <div><h3>Eladiet — Folletos y literatura de producto</h3><p>Maquetación · Preimpresión · Material para farmacia</p></div>
+          <span class="kpi tag">Print</span>
+        </div>
+      </article>
+
+      <article class="card" data-cat="motion">
+        <div class="ph v" ><video muted loop playsinline preload="metadata" poster="02_trabajo/ia_pipeline/viteba_ia_comparativa_escena_vs_anuncio_16x9.jpg"><source src="02_trabajo/ia_pipeline/viteba_ia_comparativa_escena_vs_anuncio_16x9.webm" type="video/webm"><source src="02_trabajo/ia_pipeline/viteba_ia_comparativa_escena_vs_anuncio_16x9.mp4" type="video/mp4"></video></div>
+        <div class="card-info">
+          <div><h3>Escenas de producto para campañas</h3><p>Vídeo de producto · Apoyo de IA generativa en escenas y variantes</p></div>
+          <span class="kpi tag">Motion</span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- CASE STUDY -->
+<section id="case" class="case">
+  <div class="wrap">
+    <span class="tag">Caso destacado · Viteba · 2026</span>
+    <h2>Abrir un mercado nuevo en 6 semanas: Viteba llega a Italia.</h2>
+    <div class="ph v" style="aspect-ratio:21/9;background:#2A2A2A;color:#777"><video muted loop playsinline preload="metadata" poster="03_caso_viteba_italia/caso_it_home_escritorio_16x9.jpg"><source src="03_caso_viteba_italia/caso_it_home_escritorio_16x9.webm" type="video/webm"><source src="03_caso_viteba_italia/caso_it_home_escritorio_16x9.mp4" type="video/mp4"></video></div>
+
+    <div class="case-cols">
+      <div><h4>El reto</h4><p>Lanzar la marca en un país nuevo, con la misma identidad, el packaging adaptado y todo el ecosistema de ads y ecommerce listo a la vez, en plazos muy cortos.</p></div>
+      <div><h4>Mi rol</h4><p>Dirección de arte, adaptación de packaging, key visuals, creatividades para Meta, contenido para la web viteba.it y artes finales de todas las adaptaciones.</p></div>
+      <div><h4>El enfoque</h4><p>Sistema visual modular: un key visual madre que se despliega en +80 piezas para ads, social, email y fichas de producto.</p></div>
+    </div>
+
+    <div class="phones">
+      <div class="ph v" ><video muted loop playsinline preload="metadata" poster="03_caso_viteba_italia/caso_it_1_home_pantalla.jpg"><source src="03_caso_viteba_italia/caso_it_1_home_pantalla.webm" type="video/webm"><source src="03_caso_viteba_italia/caso_it_1_home_pantalla.mp4" type="video/mp4"></video></div>
+      <div class="ph v" ><video muted loop playsinline preload="metadata" poster="03_caso_viteba_italia/caso_it_2_ficha_beauty_pantalla.jpg"><source src="03_caso_viteba_italia/caso_it_2_ficha_beauty_pantalla.webm" type="video/webm"><source src="03_caso_viteba_italia/caso_it_2_ficha_beauty_pantalla.mp4" type="video/mp4"></video></div>
+      <div class="ph v" ><video muted loop playsinline preload="metadata" poster="03_caso_viteba_italia/caso_it_3_ad_instagram_pantalla.jpg"><source src="03_caso_viteba_italia/caso_it_3_ad_instagram_pantalla.webm" type="video/webm"><source src="03_caso_viteba_italia/caso_it_3_ad_instagram_pantalla.mp4" type="video/mp4"></video></div>
+      <div class="ph v" ><video muted loop playsinline preload="metadata" poster="03_caso_viteba_italia/caso_it_4_story_pantalla.jpg"><source src="03_caso_viteba_italia/caso_it_4_story_pantalla.webm" type="video/webm"><source src="03_caso_viteba_italia/caso_it_4_story_pantalla.mp4" type="video/mp4"></video></div>
+    </div>
+
+    <div class="case-results">
+      <div><div class="big">6 sem</div><p>de briefing a lanzamiento</p></div>
+      <div><div class="big">80+</div><p>piezas creativas producidas</p></div>
+      <div><div class="big">3,4x</div><p>ROAS en campañas de lanzamiento</p></div>
+      <div><div class="big">+27%</div><p>ventas online el primer trimestre</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head"><h2>Qué hago</h2><p class="lead">Un perfil 360: un mismo criterio desde la estrategia y el desarrollo del producto hasta la imprenta, el punto de venta y la campaña digital.</p></div>
+    <div class="services-list">
+      <div class="service">
+        <span class="n">01</span><h3>Estrategia & Campañas</h3>
+        <p>Planteo la campaña completa, no solo la pieza: concepto creativo, mensajes, calendario y despliegue en cada canal, con la analítica como punto de partida y de cierre.<small>Campañas 360 · Lanzamientos de producto · Marketing digital · Google Analytics</small></p>
+      </div>
+      <div class="service">
+        <span class="n">02</span><h3>Branding & Dirección de arte</h3>
+        <p>Identidad de marca, rebranding y sistemas visuales que se mantienen coherentes del envase a la web, las redes y el punto de venta.<small>Identidad · Rebranding · Key visuals · Guías de marca</small></p>
+      </div>
+      <div class="service">
+        <span class="n">03</span><h3>Desarrollo de producto</h3>
+        <p>Acompaño el producto nuevo desde que es una idea: formato y envase, prototipos y maquetas, adaptación de la gama a nuevos mercados y todo el material necesario para que salga a la venta en fecha.<small>Nuevos formatos · Prototipos y maquetas · Impresión 3D · Lanzamiento de nuevos productos</small></p>
+      </div>
+      <div class="service">
+        <span class="n">04</span><h3>Packaging & Artes finales</h3>
+        <p>Del concepto al arte final listo para imprenta. Sistemas de packaging escalables, troqueles, preimpresión e imposición, con la normativa de farmacia y nutracéutica integrada desde el primer boceto.<small>Illustrator · InDesign · ArtiosCAD · Preps · Impresión 3D</small></p>
+      </div>
+      <div class="service">
+        <span class="n">05</span><h3>Producción & Proveedores</h3>
+        <p>Interlocución directa con imprentas y proveedores de material: preparación de archivos, revisión de pruebas y seguimiento de la producción hasta la entrega del producto.<small>Imprentas · Estuches · Etiquetas · Cajas de logística</small></p>
+      </div>
+      <div class="service">
+        <span class="n">06</span><h3>PLV & Material offline</h3>
+        <p>Todo lo que acompaña al producto fuera de la pantalla: displays, expositores, rollups, folletos, catálogos y papelería corporativa para punto de venta, ferias y eventos.<small>Displays · Rollups · Folletos · Stands · Papelería</small></p>
+      </div>
+      <div class="service">
+        <span class="n">07</span><h3>Ecommerce, Ads & Contenido</h3>
+        <p>Fichas de producto, banners, emails y creatividades para Meta, TikTok y Google, además de vídeo, motion y contenido para redes. Uso IA generativa como herramienta de apoyo cuando acelera el trabajo.<small>Shopify · WordPress · Photoshop · After Effects · Premiere · Figma</small></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="wrap about-grid">
+    <div class="ph img">Imagen · Retrato tuyo trabajando (no foto de carnet)<br>Guárdala en 05_sobre_mi/</div>
+    <div>
+      <h2>Hola, soy Rober.</h2>
+      <p>Diseñador sénior con más de 9 años lanzando producto para marcas de salud y bienestar. Me encargo de que una idea llegue completa al mercado: marca, packaging, artes finales, producción con imprenta y proveedores, PLV, ecommerce y campaña.</p>
+      <p>Trabajo con objetivos, no con encargos sueltos. Primero entiendo qué tiene que conseguir la pieza, la diseño para que se pueda producir sin sorpresas y la sigo hasta que está en el lineal o en el feed. Un solo interlocutor para marketing, imprenta y proveedores.</p>
+      <div class="timeline facts">
+        <div><b>Rol</b><span>Senior Graphic & Packaging Designer · perfil 360</span></div>
+        <div><b>Sectores</b><span>Nutracéutico · Farmacéutico · Bienestar · Formación</span></div>
+        <div><b>Entrego</b><span>Producto · Packaging · Artes finales · PLV · Campañas</span></div>
+        <div><b>Dónde</b><span>Barcelona · híbrido o remoto</span></div>
+      </div>
+      <h4 class="mini">Trayectoria</h4>
+      <div class="timeline">
+        <div><b>Viteba</b><span>Senior Graphic & Packaging Designer · 2025–hoy</span></div>
+        <div><b>Eladiet</b><span>Diseño gráfico, Packaging y Marketing Digital · 2021–2025</span></div>
+        <div><b>ICEB</b><span>Digital Marketing & Creative Design Manager · 2017–2025</span></div>
+        <div><b>EINA</b><span>Diseño y Comunicación Visual · 2018–2022</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head"><h2>Lo que dicen</h2><p class="lead">Quienes han trabajado conmigo en marketing, producto y producción.</p></div>
+    <div class="testis">
+      <div class="testi"><q>[Testimonio real de tu responsable de marketing: impacto en lanzamientos y velocidad de entrega.]</q><div class="who"><div class="ph"></div><div><b>Nombre Apellido</b><small>Head of Marketing · Viteba</small></div></div></div>
+      <div class="testi"><q>[Testimonio real de un compañero o responsable en Eladiet: calidad del packaging y trabajo en equipo.]</q><div class="who"><div class="ph"></div><div><b>Nombre Apellido</b><small>Marketing Manager · Eladiet</small></div></div></div>
+      <div class="testi"><q>[Testimonio real de ICEB o un cliente freelance: autonomía y visión de negocio.]</q><div class="who"><div class="ph"></div><div><b>Nombre Apellido</b><small>Director · ICEB</small></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+  <div class="wrap">
+    <h2>¿Hablamos?</h2>
+    <p>Cuéntame el objetivo y te devuelvo una estrategia, las piezas y la producción para alcanzarlo. Disponible en Barcelona, híbrido o remoto.</p>
+    <span class="email" id="email">hola@robertoespinosa.com</span>
+    <span class="email-msg" id="emailMsg"></span>
+    <div class="ctas">
+      <a href="#" class="btn btn-dark">Descargar CV (PDF)</a>
+      <a href="mailto:hola@robertoespinosa.com" class="btn btn-line">Escríbeme</a>
+      <a href="https://es.linkedin.com/in/roberto-espinosa-men%C3%A9ndez" class="btn btn-line" target="_blank">LinkedIn</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Rober Espinosa · Barcelona</span>
+    <span>Packaging · Artes finales · Producción · PLV · Ecommerce</span>
+  </div>
+</footer>
+
+<script>
+  // Contadores de filtros calculados a partir de las tarjetas reales
+  const cards=[...document.querySelectorAll('.card')];
+  document.querySelectorAll('.filters button').forEach(btn=>{
+    const f=btn.dataset.f;
+    const n=f==='all'?cards.length:cards.filter(c=>c.dataset.cat.split(' ').includes(f)).length;
+    btn.querySelector('sup').textContent='('+n+')';
+    btn.addEventListener('click',()=>{
+      document.querySelectorAll('.filters button').forEach(b=>b.classList.remove('active'));
+      btn.classList.add('active');
+      cards.forEach(c=>{
+        c.classList.toggle('hide', f!=='all' && !c.dataset.cat.split(' ').includes(f));
+      });
+    });
+  });
+  // Copiar email con un clic
+  document.getElementById('email').addEventListener('click',e=>{
+    navigator.clipboard.writeText(e.target.textContent);
+    document.getElementById('emailMsg').textContent='¡Copiado!';
+    setTimeout(()=>document.getElementById('emailMsg').textContent='',2000);
+  });
+  // Los vídeos solo se reproducen cuando están en pantalla (carga ligera en móvil)
+  const io=new IntersectionObserver(es=>es.forEach(e=>{
+    const v=e.target; if(e.isIntersecting){ v.play().catch(()=>{}); } else { v.pause(); }
+  }),{rootMargin:'200px'});
+  document.querySelectorAll('video').forEach(v=>io.observe(v));
+</script>
+</body>
+</html>
